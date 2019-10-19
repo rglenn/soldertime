@@ -1,3 +1,15 @@
+void clearmatrix();
+void displayString(const char outText[]);
+void writeTime(uint8_t dig1, uint8_t dig2, uint8_t dig3, uint8_t dig4);
+void displayStringDay(int day);
+void displayMonth(int code);
+void displayDate();
+void displayGraphic(int index, int pos, int len);
+void ResetScrollMessage();
+void GETFROMEEPROM();
+void FILLEEPROM();
+void draw_char(unsigned col, const char c);
+
 //*******************************************************************************************************************
 // 								                        Helper - State incrementor
 //*******************************************************************************************************************
@@ -1151,8 +1163,7 @@ void displayDate()
 /*
  * Clear LED Matrix
  */
-void
-clearmatrix()
+void clearmatrix()
 {
 	for (int i=0 ; i<WIDTH ; i++)
 		led_draw_col(i, 0, 0);

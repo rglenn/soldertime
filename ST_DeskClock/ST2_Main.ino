@@ -1,3 +1,15 @@
+extern void clearmatrix();
+extern void CheckAlarm();
+extern void EnableAlarm1(boolean onoff);
+extern void displayString(const char outText[]);
+extern void DisplayTimeSub();
+extern void setTimeSub();
+extern void setAlarmSub();
+extern void StopWatch();
+extern void DisplaySerialData();
+extern void graphican();
+extern void GoToSleep();
+
 /** \file
  * Main loop for Solder:Time Desk Clock.
  *
