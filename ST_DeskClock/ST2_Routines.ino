@@ -731,7 +731,7 @@ shortloop:
       TEXT = IncomingMessage[i] - ASCII_OFFSET;
       for(int y =0;y<5;y++)
       {    
-        Message[MessagePointer] = LETTERS[TEXT][y];
+        Message[MessagePointer] = get_letters(TEXT, y);
         MessagePointer = MessagePointer +1;
       }
 
@@ -1077,7 +1077,7 @@ void displayString(const char outText[])
 void displayGraphic(int index, int pos, int len)
 {
 	for (int y=0 ; y<len ; y++)
-		led_draw_col(pos++, GRAPHIC[index][y], 0xFF); 
+		led_draw_col(pos++, get_graphic(index, y), 0xFF); 
 }
 
 
@@ -1092,7 +1092,7 @@ draw_small_digit(
 	{
 		led_draw_col(
 			column+i,
-			LETTERS[digit+digitoffset][i+1],
+			get_letters(digit+digitoffset, i+1),
 			blinkON && blinking ? 0 : 0xFF
 		);
 	}
@@ -1106,7 +1106,7 @@ draw_char(
 )
 {
 	for (int y=0 ; y<5 ; y++)
-		led_draw_col(col++, LETTERS[c - ASCII_OFFSET][y], 0xFF); 
+		led_draw_col(col++, get_letters(c - ASCII_OFFSET, y), 0xFF); 
 } 
 
 

@@ -33,6 +33,10 @@
 #include <avr/power.h>
 #include <avr/wdt.h>
 
+extern "C"
+{
+  #include "font.h"
+}
 /** Overall width of the LED screen */
 #define WIDTH 20
 
@@ -202,6 +206,3 @@ const int digitoffset = 95;                // 95             // was 16
 /// Font offset
 #define ASCII_OFFSET 0x20
 
-extern const uint8_t LETTERS[][5];
-extern const uint8_t GRAPHIC[][5];
-extern const uint8_t logo[][20];
